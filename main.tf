@@ -9,5 +9,10 @@ terraform {
 
 resource "local_file" "hello" {
   filename = "${path.module}/output/hello.txt"
-  content  = "Hello from Terraform version_1\n"
+  content  = "${var.message}\n"
+}
+
+resource "local_file" "info" {
+  filename = "${path.module}/output/info.txt"
+  content  = "Environment: ${var.environment}\nOwner: ${var.owner}\n"
 }
