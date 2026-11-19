@@ -16,3 +16,4 @@ resource "local_file" "info" {
   filename = "${path.module}/output/info.txt"
   content  = "Environment: ${var.environment}\nOwner: ${var.owner}\n"
 }
+variable "test" { type = string }
