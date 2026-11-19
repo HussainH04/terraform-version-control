@@ -4,3 +4,5 @@
 *.tfvars
 crash.log 
 output/
+tfplan
+tfplan.txt
